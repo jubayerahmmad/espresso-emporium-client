@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        rancho: ["Rancho", "cursive"],
+        poppins: ["Poppins", "serif"],
+      },
+    },
   },
   plugins: [require("daisyui")],
 };

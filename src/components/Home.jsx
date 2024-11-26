@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import CoffeeCard from "./CoffeeCard";
 import { useState } from "react";
+import Banner from "./Banner";
+import Qualities from "./Qualities";
 
 const Home = () => {
   const loadedCoffees = useLoaderData();
@@ -8,18 +10,21 @@ const Home = () => {
   console.log(coffees);
   return (
     <div>
-      <h2 className="text-4xl my-12 text-cyan-600">
-        Hot Coffeeeeeeee: {coffees.length}
-      </h2>
-      <div className="grid lg:grid-cols-2 gap-4 p-6">
-        {coffees.map((coffee) => (
-          <CoffeeCard
-            key={coffee._id}
-            coffee={coffee}
-            coffees={coffees}
-            setCoffees={setCoffees}
-          ></CoffeeCard>
-        ))}
+      <Banner></Banner>
+      <Qualities></Qualities>
+
+      {/* cards section */}
+      <div>
+        <div className="grid lg:grid-cols-2 gap-4 p-6">
+          {coffees.map((coffee) => (
+            <CoffeeCard
+              key={coffee._id}
+              coffee={coffee}
+              coffees={coffees}
+              setCoffees={setCoffees}
+            ></CoffeeCard>
+          ))}
+        </div>
       </div>
     </div>
   );

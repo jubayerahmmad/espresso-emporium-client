@@ -1,5 +1,13 @@
 import Swal from "sweetalert2";
 
+// 1. https://i.ibb.co.com/5s1tWm2/1.png
+// 2. https://i.ibb.co.com/3F0yZwJ/2.png
+// 3. https://i.ibb.co.com/smYQ49c/3.png
+// 4. https://i.ibb.co.com/tP50vvc/4.png
+// 5. https://i.ibb.co.com/DfrYhHg/5.png
+// 6. https://i.ibb.co.com/84c3tkN/6.png
+// 7. https://i.ibb.co.com/QDHKBBf/16.png
+
 const AddCoffee = () => {
   const handleAddCoffee = (e) => {
     e.preventDefault();
@@ -48,7 +56,7 @@ const AddCoffee = () => {
   };
 
   return (
-    <div className="my-12">
+    <div className="my-6">
       <h2 className="font-bold text-4xl text-center my-4">Add Coffee</h2>
       <form className="bg-cyan-900 p-16" onSubmit={handleAddCoffee}>
         <div className="grid md:grid-cols-2 gap-4">

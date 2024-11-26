@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
-  const { _id, name, supplier, category, taste, photo } = coffee;
+  const { _id, name, supplier, category, quantity, taste, photo } = coffee;
 
   const handleDelete = (_id) => {
     console.log(_id);
@@ -37,26 +37,27 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
     });
   };
   return (
-    <div className="card card-side gap-4 items-center shadow-xl bg-red-50 text-black">
+    <div className="card card-side gap-4 items-center shadow-xl bg-[#F5F4F1] text-black p-6">
       <figure>
-        <img className="h-72 w-48" src={photo} alt="Movie" />
+        <img className="h-72 w-48" src={photo} alt="Coffee" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name}</h2>
+        <h2 className="card-title font-rancho text-2xl">{name}</h2>
         <p>{supplier}</p>
+        <p>{category}</p>
+        <p>${quantity}</p>
       </div>
-      <div className="card-actions p-2">
-        <div className="join join-vertical space-y-2 ">
-          <button className="btn join-item">View</button>
-          <Link to={`/updateCoffee/${_id}`}>
-            <button className="btn join-item">Edit</button>
+      <div className="p-2">
+        <div className="space-y-2 flex flex-col">
+          <Link className="btn bg-amber-400 text-white">
+            <button>View</button>
           </Link>
-          <button
-            onClick={() => handleDelete(_id)}
-            className="btn btn-error text-white join-item"
-          >
-            Delete
-          </button>
+          <Link className="btn bg-black text-white" to={`/updateCoffee/${_id}`}>
+            <button>Edit</button>
+          </Link>
+          <Link className="btn btn-error text-white">
+            <button onClick={() => handleDelete(_id)}>Delete</button>
+          </Link>
         </div>
       </div>
     </div>
