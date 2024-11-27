@@ -37,7 +37,7 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
     });
   };
   return (
-    <div className="card card-side gap-4 items-center shadow-xl bg-[#F5F4F1] text-black p-6">
+    <div className="card card-side gap-4 items-center bg-[#f5f4f1] text-black p-6">
       <figure>
         <img className="h-72 w-48" src={photo} alt="Coffee" />
       </figure>
@@ -49,7 +49,10 @@ const CoffeeCard = ({ coffee, coffees, setCoffees }) => {
       </div>
       <div className="p-2">
         <div className="space-y-2 flex flex-col">
-          <Link className="btn bg-amber-400 text-white">
+          <Link
+            to={`/coffeeDetails/${_id}`}
+            className="btn bg-amber-400 text-white"
+          >
             <button>View</button>
           </Link>
           <Link className="btn bg-black text-white" to={`/updateCoffee/${_id}`}>

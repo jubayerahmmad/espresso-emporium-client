@@ -49,14 +49,18 @@ const Footer = () => {
             Connect With Us
           </h1>
           <form className="flex flex-col space-y-4">
-            <input className="p-4 rounded-md" type="text" placeholder="Name" />
             <input
-              className="p-4 rounded-md"
+              className="p-4 rounded-md focus:shadow-xl"
+              type="text"
+              placeholder="Name"
+            />
+            <input
+              className="p-4 rounded-md focus:shadow-xl"
               type="email"
               placeholder="Email"
             />
             <textarea
-              className="p-4 rounded-md"
+              className="p-4 rounded-md focus:shadow-xl"
               placeholder="Message"
             ></textarea>
             <button className="submit btn rounded-full border-orange-950 font-rancho text-xl">

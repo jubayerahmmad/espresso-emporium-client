@@ -33,3 +33,7 @@
   background-size: cover;
   object-fit: cover;
 }
+.coffee-card {
+  background-image: url("./assets/more/1.png");
+  background-repeat: no-repeat;
+}
