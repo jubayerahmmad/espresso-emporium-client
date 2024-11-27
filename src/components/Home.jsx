@@ -8,7 +8,7 @@ import Gallery from "./Gallery";
 const Home = () => {
   const loadedCoffees = useLoaderData();
   const [coffees, setCoffees] = useState(loadedCoffees);
-  console.log(coffees);
+  // console.log(coffees);
   return (
     <div>
       <Banner></Banner>
